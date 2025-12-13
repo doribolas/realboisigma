@@ -1,0 +1,496 @@
+body {
+  margin: 0;
+  height: 100vh;
+  width: 100vw;
+  background-image: url("images/pickle among us.jpg");
+  background-position: center bottom;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.top,
+.middle,
+.bottom {
+  height: calc(100% / 3);
+  width: 100%;
+  display: flex;
+}
+
+.box {
+  height: 100%;
+  width: calc(100% / 5);
+}
+
+.hover:hover {
+  cursor: pointer;
+}
+
+.hover:active {
+  transform: scale(0.95);
+}
+
+/* --- MINI-GAME BUTTON COLORS --- */
+.green {
+  background-color: green;
+  opacity: 0.5;
+}
+.blue {
+  background-color: #0291ff;
+  opacity: 0.5;
+}
+.purple {
+  background-color: purple;
+  opacity: 0.5;
+}
+.red {
+  background-color: red;
+  opacity: 0.5;
+}
+.orange {
+  background-color: orange;
+  opacity: 0.5;
+}
+.grey {
+  background-color: #d3d3d3;
+  opacity: 0.5;
+}
+.dark-grey {
+  background-color: #a9a9a9;
+  opacity: 0.5;
+}
+
+/* --- YELLOW TRANSPARENT DIV --- */
+#startup {
+  background-color: rgba(255, 255, 0, 0.15); /* transparent yellow */
+  border: 3px solid yellow;
+  border-radius: 5px;
+
+  position: relative;
+  top: 300px; /* moved down 300px */
+  width: 60px; /* width stays the same */
+  height: 60px; /* height stays the same */
+  margin: 0 auto; /* center horizontally in its box */
+}
+
+/* --- MODAL STYLING --- */
+.modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-body.two-images {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 80%;
+  height: 70%;
+  background-color: #1c1c1c;
+  border-radius: 10px;
+  overflow: hidden;
+  gap: 10px;
+}
+
+.image-box {
+  flex: 1;
+  height: 100%;
+  background-color: black;
+  background-image: url("images/fort0.png");
+  background-position: bottom;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.image-box2 {
+  flex: 1;
+  height: 100%;
+  background-image: url("images/tortapounder.png");
+  background-position: bottom;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.button-row,
+.button-row2 {
+  display: flex;
+  width: 100%;
+}
+.button-row {
+  height: 21%;
+}
+.button-row2 {
+  height: 18%;
+}
+
+.short-row {
+  height: 20.5%;
+  width: 100%;
+}
+.short-row2 {
+  height: 30%;
+  width: 100%;
+}
+
+.image-box img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.modal .box {
+  width: 100%;
+  height: 100%;
+}
+.box2 {
+  height: 100%;
+  width: 60%;
+}
+
+/* --- MAP BUTTON --- */
+#mapButton {
+  position: fixed;
+  top: 15px;
+  right: 0px;
+  z-index: 15;
+  width: 150px;
+  height: auto;
+  cursor: pointer;
+}
+
+#mapButton:hover {
+  transform: scale(1.08);
+  filter: drop-shadow(0 0 6px white);
+}
+
+/* --- MAP MODAL --- */
+.modal-map {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 10;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-body-map {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  background-image: url("images/reactor.png");
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/* --- X BUTTON ONLY FOR MAP --- */
+.close-map-img {
+  position: fixed;
+  top: 20px;
+  left: 20px; /* far left */
+  width: 50px;
+  height: 50px;
+  cursor: pointer;
+  z-index: 20;
+}
+
+.close-map-img:hover {
+  transform: scale(1.1);
+}
+
+/* --- MAP SQUARES --- */
+.cafeteria-map,
+.reactor-map,
+.oxygen-map,
+.admin-map,
+.electrical-map,
+.weapons-map {
+  position: absolute;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.25s ease;
+}
+
+.weapons-map {
+  width: 175px;
+  height: 200px;
+  top: 160px;
+  left: 1350px;
+}
+
+/* --- MODAL 2 WITH TEXT STYLING --- */
+.modal2 {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+
+  font-size: 60px;
+  color: white;
+  -webkit-text-stroke: 2px black;
+  font-family: Arial, Helvetica, sans-serif;
+}
+body {
+  margin: 0;
+  height: 100vh;
+  width: 100vw;
+  background-image: url("images/pickle among us.jpg");
+  background-position: center bottom;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.top,
+.middle,
+.bottom {
+  height: calc(100% / 3);
+  width: 100%;
+  display: flex;
+}
+
+.box {
+  height: 100%;
+  width: calc(100% / 5);
+}
+
+.hover:hover {
+  cursor: pointer;
+}
+
+.hover:active {
+  transform: scale(0.95);
+}
+
+/* --- MINI-GAME BUTTON COLORS --- */
+.green {
+  background-color: green;
+  opacity: 0.5;
+}
+.blue {
+  background-color: #0291ff;
+  opacity: 0.5;
+}
+.purple {
+  background-color: purple;
+  opacity: 0.5;
+}
+.red {
+  background-color: red;
+  opacity: 0.5;
+}
+.orange {
+  background-color: orange;
+  opacity: 0.5;
+}
+.grey {
+  background-color: #d3d3d3;
+  opacity: 0.5;
+}
+.dark-grey {
+  background-color: #a9a9a9;
+  opacity: 0.5;
+}
+
+/* --- YELLOW TRANSPARENT DIV --- */
+#startup {
+  background-color: rgba(255, 255, 0, 0.15); /* transparent yellow */
+  border: 3px solid yellow;
+  border-radius: 5px;
+
+  position: relative;
+  top: 300px; /* moved down 300px */
+  width: 60px; /* width stays the same */
+  height: 60px; /* height stays the same */
+  margin: 0 auto; /* center horizontally in its box */
+}
+
+/* --- MODAL STYLING --- */
+.modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-body.two-images {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 80%;
+  height: 70%;
+  background-color: #1c1c1c;
+  border-radius: 10px;
+  overflow: hidden;
+  gap: 10px;
+}
+
+.image-box {
+  flex: 1;
+  height: 100%;
+  background-color: black;
+  background-image: url("images/fort0.png");
+  background-position: bottom;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.image-box2 {
+  flex: 1;
+  height: 100%;
+  background-image: url("images/tortapounder.png");
+  background-position: bottom;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.button-row,
+.button-row2 {
+  display: flex;
+  width: 100%;
+}
+.button-row {
+  height: 21%;
+}
+.button-row2 {
+  height: 18%;
+}
+
+.short-row {
+  height: 20.5%;
+  width: 100%;
+}
+.short-row2 {
+  height: 30%;
+  width: 100%;
+}
+
+.image-box img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.modal .box {
+  width: 100%;
+  height: 100%;
+}
+.box2 {
+  height: 100%;
+  width: 60%;
+}
+
+/* --- MAP BUTTON --- */
+#mapButton {
+  position: fixed;
+  top: 15px;
+  right: 0px;
+  z-index: 15;
+  width: 150px;
+  height: auto;
+  cursor: pointer;
+}
+
+#mapButton:hover {
+  transform: scale(1.08);
+  filter: drop-shadow(0 0 6px white);
+}
+
+/* --- MAP MODAL --- */
+.modal-map {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 10;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-body-map {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  background-image: url("images/reactor.png");
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/* --- X BUTTON ONLY FOR MAP --- */
+.close-map-img {
+  position: fixed;
+  top: 20px;
+  left: 20px; /* far left */
+  width: 50px;
+  height: 50px;
+  cursor: pointer;
+  z-index: 20;
+}
+
+.close-map-img:hover {
+  transform: scale(1.1);
+}
+
+/* --- MAP SQUARES --- */
+.cafeteria-map,
+.reactor-map,
+.oxygen-map,
+.admin-map,
+.electrical-map,
+.weapons-map {
+  position: absolute;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.25s ease;
+}
+
+.weapons-map {
+  width: 175px;
+  height: 200px;
+  top: 160px;
+  left: 1350px;
+}
+
+/* --- MODAL 2 WITH TEXT STYLING --- */
+.modal2 {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+
+  font-size: 60px;
+  color: white;
+  -webkit-text-stroke: 2px black;
+  font-family: Arial, Helvetica, sans-serif;
+}

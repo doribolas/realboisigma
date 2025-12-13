@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Mini-Game</title>
+  </head>
+  <body>
+    <!-- Background music -->
+    <audio id="bgMusic" autoplay loop>
+      <source src="audio/huevo.mp3" type="audio/mpeg" />
+    </audio>
+
+    <!-- MIDDLE ROW -->
+    <div class="middle">
+      <div class="box"></div>
+      <div class="box hover" id="startup" onclick="showModal()"></div>
+      <div class="box"></div>
+      <div class="box"></div>
+    </div>
+
+    <!-- MINI-GAME MODAL -->
+    <div class="modal" id="myModal">
+      <div class="center-content modal-body two-images">
+        <div class="image-box2">
+          <div class="short-row"></div>
+
+          <div class="button-row">
+            <div class="box"></div>
+            <div class="box hover" id="1" onclick="buttonPress(this)"></div>
+            <div class="box hover" id="2" onclick="buttonPress(this)"></div>
+            <div class="box hover" id="3" onclick="buttonPress(this)"></div>
+            <div class="box"></div>
+          </div>
+
+          <div class="button-row">
+            <div class="box"></div>
+            <div class="box hover" id="4" onclick="buttonPress(this)"></div>
+            <div class="box hover" id="5" onclick="buttonPress(this)"></div>
+            <div class="box hover" id="6" onclick="buttonPress(this)"></div>
+            <div class="box"></div>
+          </div>
+
+          <div class="button-row">
+            <div class="box"></div>
+            <div class="box hover" id="7" onclick="buttonPress(this)"></div>
+            <div class="box hover" id="8" onclick="buttonPress(this)"></div>
+            <div class="box hover" id="9" onclick="buttonPress(this)"></div>
+            <div class="box"></div>
+          </div>
+        </div>
+
+        <div class="image-box" id="imageBox">
+          <div class="short-row2"></div>
+
+          <div class="button-row2">
+            <div class="box"></div>
+            <div class="box2 valid" id="d1"></div>
+            <div class="box2 valid" id="d2"></div>
+            <div class="box2 valid" id="d3"></div>
+            <div class="box"></div>
+          </div>
+
+          <div class="button-row2">
+            <div class="box"></div>
+            <div class="box2 valid" id="d4"></div>
+            <div class="box2 valid" id="d5"></div>
+            <div class="box2 valid" id="d6"></div>
+            <div class="box"></div>
+          </div>
+
+          <div class="button-row2">
+            <div class="box"></div>
+            <div class="box2 valid" id="d7"></div>
+            <div class="box2 valid" id="d8"></div>
+            <div class="box2 valid" id="d9"></div>
+            <div class="box"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Completion Sound -->
+    <audio id="completionSound">
+      <source src="audio/completion.mp3" type="audio/mpeg" />
+    </audio>
+
+    <!-- MAP BUTTON -->
+    <img id="mapButton" class="map-icon" src="images/firulice.png" alt="Map" />
+
+    <!-- MAP MODAL -->
+    <div class="modal-map" id="myMap">
+      <span>
+        <img
+          src="images/button.png"
+          alt="Close"
+          class="close-map-img"
+          onclick="hideMap()"
+        />
+      </span>
+      <div class="modal-body-map">
+        <div
+          class="weapons-map"
+          style="top: 160px; left: 1350px"
+          onclick="goToWeapons()"
+        ></div>
+      </div>
+    </div>
+
+    <!-- TASK COMPLETE TEXT -->
+    <div
+      id="taskCompleteText"
+      style="
+        display: none;
+        color: white;
+        font-size: 28px;
+        text-align: center;
+        margin-top: 30px;
+        font-weight: bold;
+      "
+    >
+      Task Complete
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
